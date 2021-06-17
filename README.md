@@ -74,3 +74,31 @@ PROXYER_PUBLIC_HOST={你的公网IP地址或者域名} docker-compose up -d
 - 安装使用可以查看[WIKI https://gitee.com/guangleihe/proxyer/wikis/home](https://gitee.com/guangleihe/proxyer/wikis/home)
 - 当然Proxyer还处于初级版本，有问题可以在本项目中的Issues提
 - 如果定制化或者大规模应用，可以发邮件咨询: runimgservices@163.com
+
+## 关于修复
+
+- [安装Docker提示镜像已删除 #7](https://github.com/khvysofq/proxyer/issues/7)
+
+  - [x] 已对docker-compose.yml中的镜像源进行修复
+
+  - [x] 笔者在阿里云的Ubuntu操作系统上验证可用，其他os系统请自行验证
+
+  - [x] 安装操作步骤与原作者一致，仅需更改一处： 【安装Proxyer服务】
+
+    ```bash
+    # 下载docker-compose.yml到本地==>此处更改为以下内容：
+    curl -sSL https://github.com/kehuafu/proxyer/blob/master/docker-compose.yml -o docker-compose.yml
+    ```
+
+  - [x] 完整的安装步骤，请参考原作者[wiki文档](https://gitee.com/guangleihe/proxyer/wikis/%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)
+
+- [客户端一直显示端口被占用,响应码为424,怎么解决 #4](https://github.com/khvysofq/proxyer/issues/4)
+
+  ```bash
+  1.检查阿里云或腾讯云的云服务器端口6789、6544命令端口是否已开放
+  2.可以根据映射的情况，开放服务器映射的其它端口（客户端可以指定映射端口 30000 - 65530之间取值才有效）
+  3.如果选择了随机映射端口，需要开放服务器的 30000 - 65530 端口
+  ```
+
+  
+
