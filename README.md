@@ -87,7 +87,7 @@ PROXYER_PUBLIC_HOST={你的公网IP地址或者域名} docker-compose up -d
 
     ```bash
     # 下载docker-compose.yml到本地==>此处更改为以下内容：
-    curl -sSL https://github.com/kehuafu/proxyer/blob/master/docker-compose.yml -o docker-compose.yml
+    curl -sSL https://gitee.com/kehuafu/proxyer/raw/master/docker-compose.yml -o docker-compose.yml
     ```
 
   - [x] 完整的安装步骤，请参考原作者[wiki文档](https://gitee.com/guangleihe/proxyer/wikis/%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B)
